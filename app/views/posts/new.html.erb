@@ -1,0 +1,11 @@
+<div class="centering">
+<h1>ストーリーを書く</h1>
+<p>新規投稿ページです。</p>
+
+  <%= simple_form_for @post do |f| %>
+    <%= f.input :title %>
+    <%= f.input :genre %>
+    <%= f.input :content, as: :text %>
+    <%= f.button :submit %>
+	<% end %>
+</div>

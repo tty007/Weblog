@@ -1,17 +1,20 @@
 <div class="centering">
 
   <h1>Weblog<β版></h1>
+  <p>簡易トップページ</p>
   
   <% if user_signed_in? %>
   <ul>
-    <li><p><%= link_to 'アカウント編集', edit_user_registration_path %></p></li>
-    <li><p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p></li>
+    <li><p><%= link_to 'ストーリーを書く', new_post_path %></p></li>
+    <li><p><%= link_to 'アカウント編集〇', edit_user_registration_path %></p></li>
+    <li><p><%= link_to 'ログアウト〇', destroy_user_session_path, method: :delete %></p></li>
+    
   </ul>
-    <p><%= "#{current_user.name}" %></p>
+    <p>現在、<strong><%= "#{current_user.name}" %></strong> でログインしています</p>
   <% else %>
 
-    <p><%= link_to '新規登録', new_user_registration_path %></p>
-    <p><%= link_to 'ログイン', new_user_session_path %></p>
+    <p><%= link_to '新規登録〇', new_user_registration_path %></p>
+    <p><%= link_to 'ログイン〇', new_user_session_path %></p>
   <% end %>
 
 </div>
