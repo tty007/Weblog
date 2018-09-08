@@ -1,17 +1,17 @@
 <div class="centering">
 
-  <h1>Homes#index</h1>
-  <p>Find me in app/views/homes/index.html.erb</p>
+  <h1>Weblog<β版></h1>
+  
+  <% if user_signed_in? %>
+  <ul>
+    <li><p><%= link_to 'アカウント編集', edit_user_registration_path %></p></li>
+    <li><p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p></li>
+  </ul>
+    <p><%= "#{current_user.name}" %></p>
+  <% else %>
 
-  <% if !user_signed_in? %>
     <p><%= link_to '新規登録', new_user_registration_path %></p>
     <p><%= link_to 'ログイン', new_user_session_path %></p>
-  <% end %>
-
-  <% if user_signed_in? %>
-      <p><%= link_to 'アカウント編集', edit_user_registration_path %></p>
-      <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
-      <p><%= "#{current_user.name}" %></p>
   <% end %>
 
 </div>
