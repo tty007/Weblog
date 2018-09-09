@@ -5,7 +5,9 @@
   <%= simple_form_for @post do |f| %>
     <%= f.input :title %>
     <%= f.input :genre %>
-    <%= f.input :content, as: :text %>
+    <%#= f.input :content, as: :text, input_html: { class: 'tinymce', id: 'editor' } %>
+    <%= f.text_area :content, :id=>'editor', :class => "tinymce", :rows => 40, :cols => 120, required: true %>
+    <%= tinymce %>
     <%= f.button :submit %>
 	<% end %>
 </div>

@@ -1,0 +1,6 @@
+toolbar: # エディタのツールバーに表示されるもの
+  - styleselect | bold italic | undo redo
+  - image | link
+plugins: # オプション機能を
+  - image
+  - link

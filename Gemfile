@@ -16,6 +16,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 gem 'simple_form'
+gem 'tinymce-rails'
+gem 'tinymce-rails-langs'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
