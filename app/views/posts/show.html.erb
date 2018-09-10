@@ -1,13 +1,11 @@
 <div class="centering">
-  <h1>Posts#show</h1>
-  <p>Find me in app/views/posts/show.html.erb</p>
-  <div>
+  <h1 class="post-show-title">
     <%= @post.title %>
+  </h1>
+  <div class="post-show-genre">
+    ジャンル：<%= @post.genre %>
   </div>
-  <div>
-    <%= @post.genre %>
-  </div>
-  <div>
+  <div class="post-show-body">
     <%= (sanitize @post.content).html_safe %>
   </div>
   <%= link_to 'ストーリー一覧に戻る', posts_path %>

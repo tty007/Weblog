@@ -1,13 +1,20 @@
 <div class="centering">
-<h1>ストーリーを書く</h1>
-<p>新規投稿ページです。</p>
+  <%= link_to '<< ストーリー一覧へ', posts_path, class: 'go-to-index' %>
+  <%= link_to 'マイページへ >>', edit_user_registration_path, class: 'go-to-user-edit' %>
+
+  <h1 class="write-story">ストーリーを書く</h1>
+  <p>新規投稿ページです。</p>
 
   <%= simple_form_for @post do |f| %>
-    <%= f.input :title %>
-    <%= f.input :genre %>
+    <div class="form-wrapper">
+      <%= f.input :title, label: 'タイトル' %>
+    </div>
+    <%= f.input :genre, label: 'ジャンル' %>
     <%#= f.input :content, as: :text, input_html: { class: 'tinymce', id: 'editor' } %>
-    <%= f.text_area :content, :id=>'editor', :class => "tinymce", :rows => 40, :cols => 120, required: true %>
+    <div class="mce-wrapper">
+      <%= f.text_area :content, :id=>'editor', :class => "tinymce", :rows => 30, :cols => 100, required: true %>
     <%= tinymce %>
+    </div>
     <%= f.button :submit %>
 	<% end %>
 </div>

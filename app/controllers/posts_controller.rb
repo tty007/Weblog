@@ -15,6 +15,7 @@ class PostsController < ApplicationController
       @post.save
       redirect_to :action => 'index'
     else
+      flash[:notice] = 'ストーリーは作成されませんでした'
       render new
     end
   end

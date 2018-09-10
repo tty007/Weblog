@@ -1,10 +1,9 @@
 <div class="centering">
-	<h1>Posts#index</h1>
-	<p>ストーリー一覧</p>
+	<h1>ストーリー一覧</h1>
 	<% @posts.each do |post| %>
-		<div>
-			<%= link_to post.title, post_path(post) %>
-			<p>post.genre</p>
+		<div class="story-item">
+			<%= link_to post.title, post_path(post), class: 'story-title' %>
+			<p class="story-genre">ジャンル：<%= post.genre %></p>
 		</div>
 	<% end %>
 </div>

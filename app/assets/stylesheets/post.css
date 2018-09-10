@@ -1,0 +1,52 @@
+/* new */
+.go-to-index {
+    position: absolute;
+    left: 10px;
+}
+
+.go-to-user-edit {
+    position: absolute;
+    right: 10px;
+}
+
+.write-story {
+    margin-top: 20px;
+}
+
+/* index */
+.story-item {
+    border: 2px solid #333;
+    width: 90%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.story-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: chocolate;
+}
+
+.story-genre {
+    color: slateblue;
+}
+
+/* show */
+.post-show-title {
+
+}
+
+.post-show-genre {
+    display: inline-block;
+    padding: 3px 7px;
+    margin: 10px;
+    border: 2px solid red;
+    border-radius: 3px;
+}
+
+.post-show-body {
+    margin: 10px auto;
+    text-align: left;
+}
