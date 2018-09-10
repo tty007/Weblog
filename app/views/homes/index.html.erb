@@ -5,6 +5,7 @@
   
   <% if user_signed_in? %>
   <ul>
+    <li><p><%= link_to 'ストーリー一覧', posts_path %></p></li>
     <li><p><%= link_to 'ストーリーを書く', new_post_path %></p></li>
     <li><p><%= link_to 'アカウント編集〇', edit_user_registration_path %></p></li>
     <li><p><%= link_to 'ログアウト〇', destroy_user_session_path, method: :delete %></p></li>

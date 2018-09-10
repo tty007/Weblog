@@ -4,6 +4,7 @@
 		<div class="story-item">
 			<%= link_to post.title, post_path(post), class: 'story-title' %>
 			<p class="story-genre">ジャンル：<%= post.genre %></p>
+			<p>作成者：<%= post.user.name %><p>
 		</div>
 	<% end %>
 </div>
