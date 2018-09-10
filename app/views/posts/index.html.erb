@@ -1,2 +1,11 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class="centering">
+	<h1>Posts#index</h1>
+	<p>ストーリー一覧</p>
+	<% @posts.each do |post| %>
+		<div>
+			<%= link_to post.title, post_path(post) %>
+			<p>post.genre</p>
+		</div>
+	<% end %>
+</div>
+
