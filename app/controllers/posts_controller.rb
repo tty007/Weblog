@@ -15,7 +15,7 @@ class PostsController < ApplicationController
       @post.save
       redirect_to :action => 'index'
     else
-      flash[:notice] = 'ストーリーは作成されませんでした'
+      flash.now[:notice] = 'ストーリーは作成されませんでした'
       render new
     end
   end
@@ -26,6 +26,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @comment = @post.comments.build
   end
 
   def update
