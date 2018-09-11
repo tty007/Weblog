@@ -28,7 +28,7 @@
     <% @post.comments.each do |comment| %>
       <li>
         <h4><%= comment.title %></h4>
-        <p><%= comment.content %></p>
+        <p><%= comment.content %>（コメント投稿：<%= @user.name %>）</p>
       </li>
     <% end %>
   </div>
