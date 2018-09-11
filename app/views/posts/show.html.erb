@@ -10,17 +10,21 @@
     <%= (sanitize @post.content).html_safe %>
   </div>
 
-  <%# #未完成 %>
   <% if user_signed_in? %>
       <h3>コメントを書く</h3>
       <%= simple_form_for ([@post, @comment]) do |f| %>
         <%= f.input :title, label: 'title' %>
-        <%= f.input :content, label: 'comment' %>
+        <%= f.input :content, label: 'comment', as: :text %>
         <%= f.button :submit %>
       <% end %>
   <% end %>
   <div class="comment-wrapper">
+    <br>
+      -------------------------------------------
+    <br>
     <h3>コメント一覧</h3>
+      -------------------------------------------
+    <br>
     <% @post.comments.each do |comment| %>
       <li>
         <h4><%= comment.title %></h4>

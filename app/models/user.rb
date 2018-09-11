@@ -7,8 +7,8 @@ class User < ApplicationRecord
         #  :authentication_keys[];
   validates :name, presence: true, uniqueness: true
 
-  has_many :posts
-  has_many :comments
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   #登録時にメールアドレスを不要にする（オーバーライド）
   def email_required?
