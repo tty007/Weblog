@@ -4,3 +4,4 @@ toolbar: # エディタのツールバーに表示されるもの
 plugins: # オプション機能を
   - image
   - link
+  - tables

@@ -13,7 +13,7 @@
     <%#= f.input :content, as: :text, input_html: { class: 'tinymce', id: 'editor' } %>
     <div class="mce-wrapper">
       <%= f.text_area :content, :id=>'editor', :class => "tinymce", :rows => 30, :cols => 100, required: true %>
-    <%= tinymce %>
+      <%= tinymce :language => 'ja', :plugins => ['wordcount', 'paste'] %>
     </div>
     <%= f.button :submit %>
 	<% end %>

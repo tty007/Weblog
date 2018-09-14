@@ -10,13 +10,12 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    if @post
+    if @post.save
       flash[:success] = "ストーリーが作成されました"
-      @post.save
       redirect_to :action => 'index'
     else
       flash.now[:notice] = 'ストーリーは作成されませんでした'
-      render new
+      render :new
     end
   end
 
