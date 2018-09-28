@@ -13,6 +13,17 @@
     margin-top: 20px;
 }
 
+.mce-wrapper {
+    text-align: center;
+}
+
+.mce-tinymce.mce-container.mce-panel {
+    border: 10px solid #000;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
 /* index */
 .story-item {
     border: 2px solid #333;

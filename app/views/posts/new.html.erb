@@ -10,10 +10,9 @@
       <%= f.input :title, label: 'タイトル' %>
     </div>
     <%= f.input :genre, label: 'ジャンル' %>
-    <%#= f.input :content, as: :text, input_html: { class: 'tinymce', id: 'editor' } %>
     <div class="mce-wrapper">
-      <%= f.text_area :content, :id=>'editor', :class => "tinymce", :rows => 30, :cols => 100, required: true %>
-      <%= tinymce :language => 'ja', :plugins => ['wordcount', 'paste'] %>
+      <%= f.text_area :content, :class => "tinymce mce", :rows => 40, required: true %>
+      <%= tinymce :language => 'ja', :plugins => ['wordcount'], :width => "80%" %>
     </div>
     <%= f.button :submit %>
 	<% end %>
