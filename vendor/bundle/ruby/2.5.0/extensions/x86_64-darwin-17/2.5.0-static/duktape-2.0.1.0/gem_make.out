@@ -1,0 +1,17 @@
+current directory: /Users/tatsuya/rails-space/application/Weblog/vendor/bundle/ruby/2.5.0/gems/duktape-2.0.1.0/ext/duktape
+/Users/tatsuya/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180928-31594-1eppgk5.rb extconf.rb
+checking for rb_sym2str()... yes
+creating Makefile
+
+current directory: /Users/tatsuya/rails-space/application/Weblog/vendor/bundle/ruby/2.5.0/gems/duktape-2.0.1.0/ext/duktape
+make "DESTDIR=" clean
+
+current directory: /Users/tatsuya/rails-space/application/Weblog/vendor/bundle/ruby/2.5.0/gems/duktape-2.0.1.0/ext/duktape
+make "DESTDIR="
+compiling duktape.c
+compiling duktape_ext.c
+linking shared-object duktape_ext.bundle
+
+current directory: /Users/tatsuya/rails-space/application/Weblog/vendor/bundle/ruby/2.5.0/gems/duktape-2.0.1.0/ext/duktape
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 duktape_ext.bundle ./.gem.20180928-31594-1n3nyx7
