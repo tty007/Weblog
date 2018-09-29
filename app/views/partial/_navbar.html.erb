@@ -1,19 +1,17 @@
 <header class="navbar">
 	<nav>
-		<% if user_signed_in? %>
-		
-			<li><%= link_to 'ロゴ', root_path, class: 'nav-item' %></li>
-			<li><p><%= link_to 'ストーリー一覧', posts_path, class: 'nav-item' %></p></li>
-    	<li><p><%= link_to 'ストーリーを書く', new_post_path, class: 'nav-item' %></p></li>
-			<li><%= link_to 'アカウント編集', edit_user_registration_path, class: 'nav-item' %></li>
-			<li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-item' %></li>
-	
-		<% else %>
-		
-			<li><%= link_to 'ロゴ', root_path, class: 'nav-item' %></li>
-			<li><%= link_to '新規登録', new_user_registration_path, class: 'nav-item' %></li>
-			<li><%= link_to 'ログイン', new_user_session_path, class: 'nav-item' %></li>
-
-		<% end %>
+    <ul calss="nav-items">
+      <% if user_signed_in? %>
+        <li><%= link_to 'ロゴ', root_path, class: 'nav-item' %></li>
+        <li><p><%= link_to 'ストーリー一覧', posts_path, class: 'nav-item' %></p></li>
+        <li><p><%= link_to 'ストーリーを書く', new_post_path, class: 'nav-item' %></p></li>
+        <li><%= link_to 'アカウント編集', edit_user_registration_path, class: 'nav-item' %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-item' %></li>
+		  <% else %>
+        <li><%= link_to 'ロゴ', root_path, class: 'nav-item' %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: 'nav-item' %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class: 'nav-item' %></li>
+		  <% end %>
+    </ul>
 	</nav>
 </header>
