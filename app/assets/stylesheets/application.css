@@ -19,6 +19,29 @@
     padding: 5px 50px;
     text-align: center;
 }
+
+.notice,
+.alert {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #f00;
+    border-radius: 5px;
+    background-color: #f99;
+    font-weight: bold;
+    color: #fff;
+}
+span.error {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #f00;
+    border-radius: 5px;
+    background-color: #f99;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+}
 /*
 .flash-centering {
     margin: 0 auto 0;
