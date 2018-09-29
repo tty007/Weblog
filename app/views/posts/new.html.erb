@@ -3,17 +3,17 @@
   <%= link_to 'マイページへ >>', edit_user_registration_path, class: 'go-to-user-edit' %>
 
   <h1 class="write-story">ストーリーを書く</h1>
-  <p>新規投稿ページです。</p>
+  <p class="write-story-description">新規投稿ページです。思いのままにストーリーを綴りましょう！！</p>
 
   <%= simple_form_for @post do |f| %>
     <div class="form-wrapper">
-      <%= f.input :title, label: 'タイトル' %>
+      <%= f.input :title, label: 'タイトル', class: 'title-form' %>
+      <%= f.input :genre, label: 'ジャンル', class: 'genre-form' %>
+      <div class="mce-wrapper">
+        <%= f.text_area :content, :class => "tinymce mce", :rows => 40, required: true %>
+        <%= tinymce :language => 'ja', :plugins => ['wordcount'], :width => "80%" %>
+      </div>
+      <%= f.button :submit, 'ストーリーを投稿する！', class: 'create-story' %>
     </div>
-    <%= f.input :genre, label: 'ジャンル' %>
-    <div class="mce-wrapper">
-      <%= f.text_area :content, :class => "tinymce mce", :rows => 40, required: true %>
-      <%= tinymce :language => 'ja', :plugins => ['wordcount'], :width => "80%" %>
-    </div>
-    <%= f.button :submit %>
 	<% end %>
 </div>
