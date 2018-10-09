@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_08_092727) do
+ActiveRecord::Schema.define(version: 2018_10_09_004643) do
 
   create_table "comments", force: :cascade do |t|
     t.string "title"
@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 2018_09_08_092727) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "genre"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "content"
+    t.integer "user_id"
+    t.string "title", null: false
+    t.string "genre", null: false
+    t.string "content", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -41,9 +41,8 @@ ActiveRecord::Schema.define(version: 2018_09_08_092727) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
+    t.string "name", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["name"], name: "index_users_on_name", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find_by(id: params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def show
@@ -30,9 +30,14 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find_by(id: params[:id])
-    @post.update(post_params)
-    redirect_to :action => 'index'
+    @post = current_user.posts.find(params[:id])
+    #attribute()はassign_attribute()と同じか？
+    @post = attribute(post_params)
+    if @post.update(post_params)
+      redirect_to :action => 'index'
+    else
+      render :edit
+    end
   end
 
   def destroy

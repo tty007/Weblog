@@ -15,7 +15,16 @@ ul {
     text-align: center;
 }
 
-.notice,
+.notice {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(0, 179, 30);
+    border-radius: 5px;
+    background-color: rgb(0, 163, 8);
+    font-weight: bold;
+    color: #fff;
+}
+
 .alert {
     text-align: center;
     padding: 10px;
