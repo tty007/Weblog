@@ -1,0 +1,4 @@
+ToDo
+・DeviseのAuthenticationの修正(before_action Authenticateをどこに置くか)
+namespaceやscope等を使ってうまくルーティング&ファイル配置する必要がある
+

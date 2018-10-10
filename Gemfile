@@ -19,6 +19,9 @@ gem 'simple_form'
 gem 'tinymce-rails'
 gem 'tinymce-rails-langs'
 gem 'rails-i18n'
+# gem 'bootstrap'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

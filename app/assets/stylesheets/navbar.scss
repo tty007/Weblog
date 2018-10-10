@@ -14,11 +14,15 @@ nav li:first-child {
 }
 
 .nav-item {
-    color: #fff;
     font-weight: bold;
     line-height: 50px;
     margin-right: 5px;
     padding: 10px;
     text-decoration: none;
     border-left: 1px solid #fff;
+    text-align: center;
+}
+
+div.navbar-header .navbar-brand {
+    margin: 0 auto;
 }

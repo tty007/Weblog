@@ -16,3 +16,5 @@
 //= require_tree .
 //
 //= require tinymce
+//= require jquery3
+//= require bootstrap-sprockets
